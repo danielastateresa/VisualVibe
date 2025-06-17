@@ -12,7 +12,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
+// Configure the HTTP request 
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -24,14 +24,12 @@ using (var scope = app.Services.CreateScope())
 
     try
     {
-        // Check if 'myadmin' already exists before adding
         if (!context.Users.Any(u => u.Name == "myadmin"))
         {
             var newAdmin = new User
             {
                 Name = "myadmin",
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword("mypassword")
-                // Role removed to match your current table schema
             };
             context.Users.Add(newAdmin);
             context.SaveChanges();
