@@ -1,0 +1,50 @@
+﻿@model VisualVibe.Models.User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisualVibe Register</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="login-container" style="display: flex; height: 100vh;">
+
+        <!-- Left side image -->
+        <div class="login-image" style="flex: 1; background: url('img/background.png') no-repeat center center/cover;">
+        </div>
+
+        <!-- Right side register form -->
+        <div class="login-form" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
+
+            <img src="img/logo.png" alt="VisualVibe Logo" style="width: 100px; margin-bottom: 20px;">
+
+            <h1 style="font-size: 32px; color: #0a0a23; margin-bottom: 10px; font-weight: 2000;">CREATE YOUR ACCOUNT</h1>
+
+            <form action="#" method="POST" style="width: 100%; max-width: 300px;">
+
+                <input type="text" name="fullname" placeholder="Full Name" class="form-control" style="margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; width: 100%; border-radius: 5px;">
+
+                <input type="email" name="email" placeholder="Email" class="form-control" style="margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; width: 100%; border-radius: 5px;">
+
+                <input type="text" name="username" placeholder="Username" class="form-control" style="margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; width: 100%; border-radius: 5px;">
+
+                <input type="password" name="password" placeholder="Password" class="form-control" style="margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; width: 100%; border-radius: 5px;">
+
+                <button type="submit" class="btn-login" style="padding: 10px; width: 100%; background-color: #0a0a23; color: #fff; border: none; border-radius: 5px; cursor: pointer;">REGISTER</button>
+            </form>
+
+            <!-- Log in Link -->
+            <p style="margin-top: 20px; font-size: 14px; color: #333;">
+                Already have an account?
+                <a href="login.html" style="color: #1e3a8a; text-decoration: none; font-weight: 600;">Log in</a>
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>
