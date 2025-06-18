@@ -18,7 +18,11 @@ namespace VisualVibe.Controllers
         }
 
         // GET: Login Page
-        public IActionResult Login() => View();
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
 
         // POST: Login Form Submit
         [HttpPost]
@@ -26,10 +30,15 @@ namespace VisualVibe.Controllers
         {
             if (username == "admin" && password == "admin123")
             {
-                return RedirectToAction("Users");
+                return RedirectToAction("Dashboard");
             }
 
             ViewBag.Error = "Invalid username or password.";
+            return View();
+        }
+
+        public IActionResult Dashboard()
+        {
             return View();
         }
 
