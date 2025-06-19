@@ -164,5 +164,22 @@ namespace VisualVibe.Controllers
 
         public IActionResult Home() => View();
         public IActionResult Edit() => View();
+
+        public IActionResult Bookings()
+        {
+            return View();
+        }
+        public IActionResult Services()
+        {
+            return View();
+        }
+        public IActionResult Inbox()
+        {
+            return View();
+        }
+        public IActionResult Messages()
+        {
+            return View();
+        }
     }
 }

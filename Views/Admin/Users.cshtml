@@ -13,32 +13,52 @@
     <div class="d-flex">
         <!-- Sidebar -->
         <div class="sidebar d-flex flex-column">
-            <div class="brand">VisualVibe</div>
+            <div class="brand text-center py-4">
+                <img src="~/img/logo.png" style="width: 100%; height: 150px; object-fit: contain; margin-bottom: 2px;">
+            </div>
             <a href="/Admin/Dashboard" class="nav-link active"><i class="bi bi-grid-fill me-2"></i>Dashboard</a>
-            <a href="#" class="nav-link"><i class="bi bi-calendar2-check-fill me-2"></i>Bookings</a>
-            <a href="/Admin/Users" class="nav-link active"><i class="bi bi-people-fill me-2"></i>Users</a>
-            <a href="#" class="nav-link"><i class="bi bi-shop-window me-2"></i>Services</a>
-            <a href="#" class="nav-link"><i class="bi bi-envelope-fill me-2"></i>Inbox</a>
-            <a href="#" class="nav-link"><i class="bi bi-chat-dots-fill me-2"></i>Messages</a>
+            <a href="/Admin/Bookings" class="nav-link"><i class="bi bi-calendar2-check-fill me-2"></i>Bookings</a>
+            <a href="/Admin/Users" class="nav-link"><i class="bi bi-people-fill me-2"></i>Users</a>
+            <a href="/Admin/Services" class="nav-link"><i class="bi bi-shop-window me-2"></i>Services</a>
+            <a href="/Admin/Inbox" class="nav-link"><i class="bi bi-envelope-fill me-2"></i>Inbox</a>
+            <a href="/Admin/Messages" class="nav-link"><i class="bi bi-chat-dots-fill me-2"></i>Messages</a>
         </div>
 
         <!-- Main Content -->
-        <div class="flex-grow-1 px-3 py-2">
-            <div class="d-flex justify-content-end align-items-center mb-4">
-                <i class="bi bi-person-circle fs-4 me-2"></i>
-                <span class="profile">Nico Robin</span>
+        <div class="flex-grow-1 p-4">
+            <div class="d-flex justify-content-end align-items-center mb-4 position-fixed-top-right">
+                <div class="dropdown">
+                    <a class="d-flex align-items-center text-decoration-none dropdown-toggle" style="color:black;" href="#" role="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle fs-4 me-2"></i>
+                        <span class="profile">Nico Robin</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                        <li><a class="dropdown-item" href="/Profile/Profile">Profile</a></li>
+                        <li><a class="dropdown-item" href="/Settings">Settings</a></li>
+                        <li>
+                            <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-link text-danger">Logout</button>
+                            </form>
+
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="fw-bold">Users</h2>
-                <a href="/Admin/Add" class="btn btn-success"><i class="bi bi-plus-lg me-1"></i> Add Admin</a>
+            <h1 class="mb-4 fw-bold">Users</h1>
+
+            <div class="tab-links mb-3 d-flex align-items-center">
+                <div class="flex-grow-1">
+                    <a href="#" class="active me-3">Admin</a>
+                    <a href="#" class="me-3">Customer</a>
+                    <a href="#">Vendor</a>
+                </div>
+                <a href="/Admin/Add" class="btn btn-light" style="padding-top: 0;">
+                    <i class="bi bi-plus-lg me-1"></i> Add Admin
+                </a>
             </div>
 
-            <div class="tab-links mb-3">
-                <a href="#" class="active">Admin</a>
-                <a href="#">Customer</a>
-                <a href="#">Vendor</a>
-            </div>
 
             <div class="table-responsive">
                 <table class="table table-hover text-center align-middle">
@@ -85,7 +105,7 @@
                                     <a asp-controller="Admin" asp-action="Delete" asp-route-id="@user.Id" class="btn btn-link p-0" style="color: black;" onclick="return confirm('Are you sure?');">
                                         <i class="bi bi-trash"></i>
                                     </a>
-
+                                    </div>
                                 </td>
                             </tr>
                         }

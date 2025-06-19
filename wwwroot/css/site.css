@@ -22,19 +22,27 @@ html, body {
     height: 100vh;
     background-color: #fff;
     border-right: 1px solid #dee2e6;
-    padding: 20px 10px;
+    padding: 20px 18px;
 }
 
     .sidebar .nav-link {
         color: #000;
         font-weight: 500;
         margin-bottom: 20px;
+        padding: 10px 15px;
+        display: block;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-        .sidebar .nav-link.active {
-            background-color: #dbeafe;
-            border-radius: 8px;
+        .sidebar .nav-link:hover {
+            background-color: #bfdbfe;
+            color: #1e40af;
+            cursor: pointer;
         }
+        
+
 
 /* =========================
    BRANDING
@@ -53,6 +61,7 @@ html, body {
 .profile {
     font-weight: 600;
 }
+
 
 /* =========================
    TABS
@@ -95,7 +104,7 @@ html, body {
    BUTTONS
 ========================= */
 .btn-primary {
-    background-color: #002b64;
+    background-color: none;
     border: none;
     display: block;
     margin: 20px auto;
@@ -145,23 +154,23 @@ html, body {
     }
 
 .card-users {
-    border-left: 5px solid #0d6efd;
+    border-left: 5px solid #0d6efd;    
 }
 
 .card-vendor {
-    border-left: 5px solid #198754;
+    border-left: 5px solid #198754;   
 }
 
 .card-sales {
-    border-left: 5px solid #ffc107;
+    border-left: 5px solid #ffc107;    
 }
 
 .card-bookings {
-    border-left: 5px solid #20c997;
+    border-left: 5px solid #20c997;   
 }
 
 .card-review {
-    border-left: 5px solid #6f42c1;
+    border-left: 5px solid #6f42c1;     
 }
 
 /* =========================
