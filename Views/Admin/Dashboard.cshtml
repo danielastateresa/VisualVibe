@@ -25,9 +25,118 @@
         </div>
 
         <!-- Main Content -->
-        <div class="main-content">
-            <h2 class="fw-bold mb-4">Welcome to the Dashboard</h2>
-            <img src="~/img/background.png" alt="Dashboard Visual" class="dashboard-image"/>
+        <div class="flex-grow-1 p-4">
+            <!-- Top Right Profile -->
+            <div class="d-flex justify-content-end align-items-center mb-4">
+                <i class="bi bi-person-circle fs-4 me-2"></i>
+                <span class="profile">Nico Robin</span>
+            </div>
+
+            <!-- Dashboard Header -->
+            <h1 class="mb-4 fw-bold">Dashboard</h1>
+
+            <!-- Dashboard Cards -->
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-white bg-primary h-100 text-center p-3">
+                        <div class="fs-5">Total Users</div>
+                        <div class="fs-2 fw-bold">50</div>
+                        <div class="card-icon"><i class="bi bi-people fs-3"></i></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-white bg-success h-100 text-center p-3">
+                        <div class="fs-5">Total Vendors</div>
+                        <div class="fs-2 fw-bold">15</div>
+                        <div class="card-icon"><i class="bi bi-person-check fs-3"></i></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-white bg-warning h-100 text-center p-3">
+                        <div class="fs-5">Total Sales</div>
+                        <div class="fs-2 fw-bold">₱25,000</div>
+                        <div class="card-icon"><i class="bi bi-graph-up-arrow fs-3"></i></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-white bg-danger h-100 text-center p-3">
+                        <div class="fs-5">Total Bookings</div>
+                        <div class="fs-2 fw-bold">120</div>
+                        <div class="card-icon"><i class="bi bi-book fs-3"></i></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card text-white bg-dark h-100 text-center p-3">
+                        <div class="fs-5">Total Reviews</div>
+                        <div class="fs-2 fw-bold">88</div>
+                        <div class="card-icon"><i class="bi bi-bookmark fs-3"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Purchased Event Table -->
+            <div class="card mb-5 mt-4">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Top Purchased Event</h5>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-sm text-center">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Event Name</th>
+                                    <th>Category</th>
+                                    <th>Venue</th>
+                                    <th>Price</th>
+                                    <th>Rating</th>
+                                    <th>Sales</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Kate & John Wedding</td>
+                                    <td>Wedding</td>
+                                    <td>Grand Hall</td>
+                                    <td>₱25,000</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>14</td>
+                                    <td>
+                                        <a href="#" class="btn"><i class="bi bi-eye"></i></a>
+                                        <a href="#" class="btn"><i class="bi bi-pencil-square"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Corporate Night</td>
+                                    <td>Corporate</td>
+                                    <td>Sky Lounge</td>
+                                    <td>₱18,000</td>
+                                    <td>⭐⭐⭐⭐</td>
+                                    <td>10</td>
+                                    <td>
+                                        <a href="#" class="btn"><i class="bi bi-eye"></i></a>
+                                        <a href="#" class="btn"><i class="bi bi-pencil-square"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Birthday Hut</td>
+                                    <td>Birthday</td>
+                                    <td>Garden Venue</td>
+                                    <td>₱12,000</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>7</td>
+                                    <td>
+                                        <a href="#" class="btn"><i class="bi bi-eye"></i></a>
+                                        <a href="#" class="btn"><i class="bi bi-pencil-square"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -35,4 +144,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 </html>
+
 

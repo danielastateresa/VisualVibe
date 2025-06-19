@@ -113,6 +113,66 @@ html, body {
     }
 
 /* =========================
+   DASHBOARD CARDS
+========================= */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    color: #0d1b3f;
+}
+
+    .dashboard-card .fs-2 {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+
+    .dashboard-card .card-icon {
+        font-size: 1.8rem;
+        color: #666;
+        margin-top: 8px;
+    }
+
+.card-users {
+    border-left: 5px solid #0d6efd;
+}
+
+.card-vendor {
+    border-left: 5px solid #198754;
+}
+
+.card-sales {
+    border-left: 5px solid #ffc107;
+}
+
+.card-bookings {
+    border-left: 5px solid #20c997;
+}
+
+.card-review {
+    border-left: 5px solid #6f42c1;
+}
+
+/* =========================
+   RESPONSIVE TABLE WRAPPER
+========================= */
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+/* =========================
    LOGIN PAGE
 ========================= */
 
