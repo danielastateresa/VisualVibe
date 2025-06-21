@@ -29,7 +29,7 @@
         <!-- Main Content -->
         <div class="flex-grow-1 p-4">
             <!-- Top Right Profile -->
-            <div class="d-flex justify-content-end align-items-center mb-4">
+            <div class="d-flex justify-content-end align-items-center mb-4 position-fixed-top-right">
                 <div class="dropdown">
                     <a class="d-flex align-items-center text-decoration-none dropdown-toggle" style="color:black;" href="#" role="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-person-circle fs-4 me-2"></i>
@@ -97,18 +97,23 @@
                     <h5 class="card-title fw-bold">Top Purchased Event</h5>
                     <div class="table-responsive">
                         <table class="table table-bordered table-sm text-center">
-                            <thead class="table-dark">
+                            <thead>
                                 <tr>
-                                    <th>No.</th>
-                                    <th>Event Name</th>
-                                    <th>Category</th>
-                                    <th>Venue</th>
-                                    <th>Price</th>
-                                    <th>Rating</th>
-                                    <th>Sales</th>
-                                    <th>Action</th>
+                                    <th style="background-color: #1e3269; color: white;">No.</th>
+                                    <th style="background-color: #1e3269; color: white;">Event Name</th>
+                                    <th style="background-color: #1e3269; color: white;">Category</th>
+                                    <th style="background-color: #1e3269; color: white;">Venue</th>
+                                    <th style ="background-color: #1e3269; color: white;">Price</th>
+                                    <th style="background-color: #1e3269; color: white;">Rating</th>
+                                    <th style="background-color: #1e3269; color: white;">Sales</th>
+                                    <th style="background-color: #1e3269; color: white;">Action</th>
                                 </tr>
                             </thead>
+                            <style>
+                                tbody td {
+                                    font-weight: normal !important;
+                                }
+                            </style>
                             <tbody>
                                 <tr>
                                     <td>1</td>
